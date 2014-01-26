@@ -16,3 +16,5 @@ Después, para utilizarlo como base para los estilos del sitio:
 ```sass
   @import "base/all";
 ```
+
+El directorio test incluye páginas modelo de prueba para ver como apliacan los estilos
