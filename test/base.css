@@ -1,1 +1,171 @@
-/* Intencionalmente vacío hasta que se realice la primera compilación del sass */
+body {
+  width: 100%;
+  *zoom: 1; }
+  body:before, body:after {
+    content: "";
+    display: table; }
+  body:after {
+    clear: both; }
+
+body {
+  margin: 0; }
+
+.full {
+  width: 100%; }
+
+#lienzo {
+  display: inline;
+  float: left;
+  width: 96.66667%;
+  margin: 0 1.66667%; }
+
+/*================================
+=            Cabecera            =
+================================*/
+#cabecera {
+  display: inline;
+  float: left;
+  width: 96.66667%;
+  margin: 0 1.66667%;
+  margin-bottom: 10px;
+  background-color: #2ecc71; }
+
+#alojaLogo {
+  display: inline;
+  float: left;
+  width: 21.66667%;
+  margin: 0 1.66667%;
+  margin-left: 0; }
+
+#menu {
+  display: inline;
+  float: left;
+  width: 46.66667%;
+  margin: 0 1.66667%; }
+
+#social {
+  display: inline;
+  float: left;
+  width: 21.66667%;
+  margin: 0 1.66667%;
+  margin-right: 0;
+  float: right; }
+
+/*================================
+=            Cuerpo            =
+================================*/
+#cuerpo {
+  display: inline;
+  float: left;
+  width: 96.66667%;
+  margin: 0 1.66667%; }
+
+#tullido {
+  display: inline;
+  float: left;
+  width: 96.66667%;
+  margin: 0 1.66667%; }
+
+#contenido {
+  display: inline;
+  float: left;
+  width: 71.66667%;
+  margin: 0 1.66667%;
+  float: left;
+  margin-left: 0;
+  height: 510px;
+  background-color: #1abc9c; }
+  #contenido .noticia-container {
+    display: inline;
+    float: left;
+    width: 96.66667%;
+    margin: 0 1.66667%;
+    margin-left: 0;
+    margin-bottom: 10px;
+    margin-top: 10px; }
+    #contenido .noticia-container .post-thumbnail {
+      display: inline;
+      float: left;
+      width: 21.66667%;
+      margin: 0 1.66667%;
+      margin: 0;
+      float: left; }
+    #contenido .noticia-container .extracto {
+      display: inline;
+      float: left;
+      width: 71.66667%;
+      margin: 0 1.66667%; }
+
+#barra {
+  display: inline;
+  float: left;
+  width: 21.66667%;
+  margin: 0 1.66667%;
+  float: right;
+  margin-right: 0;
+  height: 510px;
+  background-color: #3498db; }
+
+/*================================
+=            Pie            =
+================================*/
+#pie {
+  display: inline;
+  float: left;
+  width: 96.66667%;
+  margin: 0 1.66667%;
+  margin-top: 10px;
+  height: 100px;
+  background-color: #9b59b6; }
+
+/*================================
+=            Media Queries            =
+================================*/
+@media screen and (max-width: 480px) {
+  #barra, #contenido {
+    width: 100%; }
+
+  #barra {
+    margin-top: 10px;
+    height: 60px; }
+
+  #alojaLogo {
+    display: inline;
+    float: left;
+    width: 71.66667%;
+    margin: 0 1.66667%;
+    margin: 0;
+    float: right; }
+
+  #menu {
+    display: inline;
+    float: left;
+    width: 21.66667%;
+    margin: 0 1.66667%;
+    margin: 0;
+    height: 40px; }
+
+  #social {
+    width: 100%;
+    background-color: red;
+    margin: 0;
+    padding: 0;
+    float: left;
+    height: 40px; }
+
+  #contenido .noticia-container {
+    width: 100%; }
+    #contenido .noticia-container .extracto, #contenido .noticia-container .titular {
+      display: inline;
+      float: left;
+      width: 96.66667%;
+      margin: 0 1.66667%; }
+    #contenido .noticia-container .post-thumbnail {
+      display: inline;
+      float: left;
+      width: 96.66667%;
+      margin: 0 1.66667%; }
+      #contenido .noticia-container .post-thumbnail img {
+        width: 100%; }
+      #contenido .noticia-container .post-thumbnail figcaption {
+        text-align: center; } }
