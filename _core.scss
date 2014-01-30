@@ -1,0 +1,14 @@
+/**
+ * Base for all Mozilla Hispano Styles
+ */
+
+@import "compass";
+
+/* Base variables */
+// TODO: This should be replaced in _typography.css
+$baseFontSize: 14px;
+$baseFontFamily: 'Open Sans', sans-serif;
+$baseLine: 20px;
+$textColorSecondary: #484848;
+
+/* Base rules */

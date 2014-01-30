@@ -1,0 +1,89 @@
+/* Styles for buttons */
+
+// Import the core styles
+@import "core";
+
+// Variables for buttons
+// Sizes
+$buttonLineHeight: 1.1em;
+$buttonMinWidth: 80px;
+
+// Borders
+$buttonBorderRadius: 0.25em;
+
+// Colors
+$buttonGreen: #81bc2e;
+$buttonGreenDark: shade($buttonGreen, 10%);
+$buttonTextColor: #ffffff;
+$buttonBlue: #43a6e2;
+$buttonBlueDark: #277ac1;
+$buttonInsensitiveTop: #bfc7cd;
+$buttonInsensitiveBottom: #9ca3aa;
+$buttonInsensitiveTextColor: #eeeeee;
+$buttonInsensitiveBackgroundColor: #9ca3aa;
+
+// Shadows
+$buttonShadowBottom: 0px 1px 0px 0px rgba(0, 0, 0, 0.2);
+$buttonShadowBottomInset: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.3);
+$buttonShadowHover: inset 0px 12px 24px 2px saturate($buttonBlue, 10%);
+$buttonShadowFocusRing: 0 0 0 2px rgba(73,173,227,0.4);
+$buttonShadow: $buttonShadowBottom, $buttonShadowBottomInset;
+$buttonShadowHover: $buttonShadowBottom, $buttonShadowBottomInset, $buttonShadowHover;
+$buttonShadowFocus: $buttonShadowBottom, $buttonShadowBottomInset, $buttonShadowHover, $buttonShadowFocusRing;
+$buttonShadowActive: inset 0px 2px 0px 0px rgba(0, 0, 0, 0.2),
+                     inset 0px 12px 24px 6px rgba(0,0,0,0.2),
+                     inset 0px 0px 2px 2px rgba(0,0,0,0.2);
+$buttonTextShadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+
+// Transitions
+$buttonTransition: all linear 0.25s;
+
+// Rules
+
+.button,
+.button:link,
+.button:visited {
+    @include inline-block;
+    @include border-radius($buttonBorderRadius);
+    @include box-shadow($buttonShadowBottom, $buttonShadowBottomInset);
+    background-color: $buttonBlue;
+    @include background-image(linear-gradient($buttonBlue, $buttonBlueDark));
+    color: $buttonTextColor;
+    text-align: center;
+    font-size: $baseFontSize;
+    font-weight: bold;
+    padding: ($baseLine / 4) ($baseLine / 2);
+    line-height: $buttonLineHeight;
+    text-decoration: none;
+    min-width: $buttonMinWidth;
+    border: 0;
+    @include text-shadow($buttonTextShadow);
+    @include transition($buttonTransition);
+
+    &:hover,
+    &.hover,
+    &:focus,
+    &.focus {
+        @include box-shadow($buttonShadowHover);
+    }
+
+    &:focus,
+    &.focus {
+        outline-color: $textColorSecondary;
+        @include box-shadow($buttonShadowFocus);
+    }
+
+    &:active,
+    &.active {
+        @include box-shadow($buttonShadowActive);
+    }
+
+    &.insensitive,
+    &.insensitive:hover,
+    &.insensitive:focus {
+        background-color: $buttonInsensitiveBackgroundColor;
+        @include background-image(linear-gradient($buttonInsensitiveTop, $buttonInsensitiveBottom));
+        @include box-shadow($buttonShadow);
+        color: $buttonInsensitiveTextColor;
+    }
+}
