@@ -1,0 +1,152 @@
+body {
+	margin: 0;
+}
+
+.full {
+	width: 100%;
+}
+
+#lienzo {
+	@include column(12);
+}
+
+/*================================
+=            Cabecera            =
+================================*/
+
+#cabecera {
+	@include column(12);
+	margin-bottom: 10px;
+	background-color: #2ecc71;
+}
+
+#alojaLogo {
+	@include column(3);
+	margin-left: 0;
+}
+
+#menu {
+	@include column(6);
+}
+
+#social {
+	@include column(3);
+	margin-right: 0;
+	float: right;
+}
+
+/*================================
+=            Cuerpo            =
+================================*/
+
+#cuerpo {
+	@include column(12);
+}
+
+#tullido {
+	@include column(12);
+}
+
+#contenido {
+	@include column(9);
+	float: left;
+	margin-left: 0;
+	height: 510px;
+	background-color: #1abc9c;
+
+	.noticia-container {
+		@include column(12);
+		margin-left: 0;
+		margin-bottom: 10px;
+		margin-top: 10px;
+
+		.post-thumbnail {
+			@include column(3);
+			margin: 0;
+			float: left;
+		}
+
+		.extracto {
+			@include column(9);
+
+		}
+	}
+
+}
+
+#barra {
+	@include column(3);
+	float:right;
+	margin-right: 0;
+	height: 510px;
+	background-color: #3498db;
+}
+
+/*================================
+=            Pie            =
+================================*/
+
+#pie {
+	@include column(12);
+	margin-top: 10px;
+	height: 100px;
+	background-color: #9b59b6;
+}
+
+
+/*================================
+=            Media Queries            =
+================================*/
+@media screen and (max-width: 480px) {
+
+	#barra, #contenido {
+		width:100%;
+	}
+
+	#barra {
+		margin-top: 10px;
+		height: 60px;
+	}
+
+	#alojaLogo {
+		@include column(9);
+		margin: 0;
+		float: right;
+	}
+
+	#menu {
+		@include column(3);
+		margin: 0;
+		height: 40px;
+	}
+
+	#social {
+		width: 100%;
+		background-color: red;
+		margin: 0;
+		padding: 0;
+		float: left;
+		height: 40px;
+	}
+
+	#contenido {
+		.noticia-container {
+			width: 100%;
+
+			.extracto, .titular {
+				@include column(12);
+			}
+
+			.post-thumbnail {
+				@include column(12);
+				img {
+					width: 100%;
+				}
+
+				figcaption {
+					text-align: center;
+				}
+			}
+		}
+	}
+}
